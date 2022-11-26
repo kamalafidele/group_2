@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Options /> should render correctly 1`] = `
+exports['<Options /> should render correctly 1'] = `
 Array [
   <option
     value="English"
@@ -23,4 +23,4 @@ Array [
     French
   </option>,
 ]
-`;
+`

@@ -12,6 +12,6 @@ describe('<Jumbotron />', () => {
 
   it('should have <div> with container class', () => {
     const component = mount(<Jumbotron />)
-    expect(component.find('div').hasClass('jumbotron')).toBe(true)
+    expect(component.find('div').hasClass('jumbotron-element')).toBe(true)
   })
 })
