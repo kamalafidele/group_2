@@ -22,13 +22,10 @@ describe('<Form>', () => {
   it('Should capture email correctly onChange and change the props accordingly', () => {
     const component = mount(<Form />)
     const input = component.find('input').at(2)
-    // input.simulate('change', {target: {email: 'mail@hotmail.com'}}); -- this does not work
 
     input.instance().value = 'mail@hotmail.com'
     input.simulate('change')
     expect(component.find('input').at(2).props().value).toEqual('mail@hotmail.com')
-    // Alternatively, can check state
-    // expect(component.state().email).toEqual('mail@hotmail.com');
   })
 
   it('Should capture email correctly onChange and change the state accordingly', () => {
@@ -49,15 +46,7 @@ describe('<Form>', () => {
     optionGerman.instance().selected = true
     input.simulate('change')
 
-    // Simulating change on select element doesn't work.
-    // input.simulate('change', {target: {selectedOptions: ['Japanese', 'French']}});
-    // input.instance().value = ['Japanese', 'French'];
-    // input.simulate('select', {target: input.instance()});
-
     expect(component.find('select').at(0).props().value).toEqual(['English', 'German'])
-
-    // Alternatiely can check state
-    // expect(component.state().languages).toEqual(['Japanese', 'French']);
   })
 
   it('Should capture checkbox ticked correctly onChange', () => {
